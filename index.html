@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="container">
+	<br>
+	<h2 class="text-center">The editable Invoicer!</h2>
+	<p class="lead">
+		This whole Invoice is editable. Well, almost all fields are editable. Try clicking on any of the fields and you'll be able to tell if you can edit it. The line totals and invoice totals will update as you write in new numbers. Enjoy!
+
+	</p>
+
+</div>
+
+	<div id="app" class="container">
+		<div class="row header">
+			<div class="col-3">
+				<h1 class="firstName" contenteditable="true">INVOICE</h1>
+			
+			</div>
+			<div class="col-5"></div>
+			<div class="col-2 infoCol">
+				<p contenteditable="true">Phone number</p>
+				<p contenteditable="true">your email</p>
+				<p contenteditable="true">your website</p>
+			</div>
+			<div class="col-2 infoCol">
+				<p contenteditable="true">Address</p>
+				<p contenteditable="true">City, State, Zip</p>
+				<p contenteditable="true">ZIP</p>
+			</div>
+
+		</div>
+		<div class="row invoiceBody">
+			
+			<div class="col-3">
+				<p class="invoiceHeader">Billed to:</p>
+				<span class="clientAddress">
+				<p contenteditable="true">Client Name</p>
+				<p contenteditable="true">Client Address</p>
+				<p contenteditable="true">City, State</p>
+				<p contenteditable="true">ZIP</p>
+				</span>
+			</div>
+			<div class="col-3">
+				<p class="invoiceHeader">Invoice Number</p>
+				<p contenteditable="true" class="moveUp">000000</p>
+				<br>
+				<p class="invoiceHeader">Date of Issue</p>
+				<p contenteditable="true" class="moveUp">00/00/0000</p>
+			</div>
+			<div class="col-2">
+				
+			</div>
+			<div class="col-3 text-center">
+				<p class="invoiceHeader">Invoice Total</p>
+				<h2 class="largeTotal">${{ invoiceTotal }}</h2>
+			</div>
+		</div>
+<hr>
+
+<div class="row invoiceItems">
+	<div class="col-4">
+		<p class="invoiceHeader">Description</p>
+		<p contenteditable="true">Your item name/service rendered</p>
+		<p><small contenteditable="true">Your item/service description</small></p>
+	</div>
+	<div class="col-3 text-left">
+		<p class="invoiceHeader" contenteditable="true">Unit Cost/Hourly rate</p>
+		$<input type="text" v-model="unitCost1" value="unitCost1" style="width:120px;">
+	</div>
+	<div class="col-2 text-left">
+		<p class="invoiceHeader" contenteditable="true">Qty/Hours</p>
+		<input type="text" v-model="qtyOrHourly1" value="qtyOrHourly1" style="width:120px;">
+	</div>
+	<div class="col-3">
+		<p class="invoiceHeader" contenteditable="true">Amount</p>
+		<p>${{line1}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-1"></div>
+	<div class="col-9 separate"></div>
+</div>
+
+<div class="row invoiceItems">
+	<div class="col-4">
+		<p class="invoiceHeader">Description</p>
+		<p contenteditable="true">Your item name/service rendered</p>
+		<p><small contenteditable="true">Your item/service description</small></p>
+	</div>
+	<div class="col-3 text-left">
+		<p class="invoiceHeader" contenteditable="true">Unit Cost</p>
+		$<input type="text" v-model="unitCost2" value="unitCost2" style="width:120px;">
+	</div>
+	<div class="col-2 text-left">
+		<p class="invoiceHeader" contenteditable="true">Qty/Hours</p>
+		<input type="text" v-model="qtyOrHourly2" value="qtyOrHourly2" style="width:120px;">
+	</div>
+	<div class="col-3">
+		<p class="invoiceHeader" contenteditable="true">Amount</p>
+		<p>${{line2}}</p>
+	</div>
+</div>
+
+	</div>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>

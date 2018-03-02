@@ -1,0 +1,70 @@
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+border:none;
+outline:none;
+font-size: 1.2em;
+color: #d1b414;
+}
+input:focus {
+	font-size: 1.2em;
+color: #d1b414;
+}
+#app {
+	padding: 0px;
+	border: solid 2px gray;
+	min-width: 991px;
+	width: 991px;
+}
+
+
+input {
+	border:none !important;
+	outline: none;
+}
+#app {
+	margin-top: 50px;
+}
+
+	.header {
+	background: #8195A3;
+	width: 987px;
+	color: white;	
+	padding: 10px;
+	margin-left: 0px !important;
+	}
+		.infoCol {
+			margin-top: 10px;
+			line-height: 16px;
+		}
+		.firstName {
+			margin-top: 20px;
+		}
+
+.separate {
+	border-bottom: 1px solid #8195A3;
+}
+.invoiceBody {
+	margin-top: 30px;
+	padding-left: 20px;
+}
+	.invoiceHeader {
+		margin-top: 15px;
+		font-weight: 500;
+		color: #8195A3;
+	}
+	.clientAddress {
+		line-height: 16px;
+	}
+	.largeTotal {
+		color: #8195A3;
+		font-weight: 300;
+		font-size: 36px;
+	}
+	.moveUp {
+		margin-top: -15px;
+	}
+
+
+.invoiceItems {
+	padding-left: 20px;
+}
